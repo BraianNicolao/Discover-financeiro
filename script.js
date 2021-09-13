@@ -44,3 +44,26 @@ const Transaction = {
     //entrada - saídas
   }
 }
+
+const DOM = {
+  addTransaction(transaction, index){
+    const tr = document.createElement('tr')
+    tr.innerHTML = DOM.innerHTMLTransaction(transaction)
+  },
+  innerHTMLTransaction(transaction){
+    
+
+    
+    const html = `  
+    <td class="description">${transaction.description}</td>
+    <td class="expense">${transaction.amount}</td>
+    <td class="date">${transaction.date}</td>
+    <td>
+        <img src="./assets/minus.svg" alt="Remover transação">
+    </td>
+    `
+    return html
+  }
+}
+
+DOM.addTransaction(transactions[0])
