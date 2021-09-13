@@ -46,6 +46,7 @@ const Transaction = {
 }
 
 const DOM = {
+  transactionsContainer: document.getElementById();
   addTransaction(transaction, index){
     const tr = document.createElement('tr')
     tr.innerHTML = DOM.innerHTMLTransaction(transaction)
